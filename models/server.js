@@ -1,7 +1,13 @@
 const express = require("express")
 const cors = require('cors')
 const db = require("../db/connection");
+
+
+// create model
 const User = require("../models/user")
+const Apuesta = require("../models/apuesta")
+
+
 
 class Server{
     constructor(){
@@ -43,6 +49,7 @@ class Server{
 
     routes(){
         this.app.use('/api/users', require('../routes/user'))
+        this.app.use('/api/auth', require('../routes/auth'))
         
   
 }
