@@ -6,6 +6,7 @@ const db = require("../db/connection");
 // create model
 const User = require("../models/user")
 const Apuesta = require("../models/apuesta")
+const Numero = require("../models/numeroganadores")
 
 
 
@@ -50,6 +51,8 @@ class Server{
     routes(){
         this.app.use('/api/users', require('../routes/user'))
         this.app.use('/api/auth', require('../routes/auth'))
+        this.app.use('/api/apuesta', require('../routes/apuesta'))
+        this.app.use('/api/numero', require('../routes/numeroganadores'))
         
   
 }

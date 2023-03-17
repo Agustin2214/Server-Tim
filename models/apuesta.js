@@ -15,6 +15,10 @@ const apuesta = db.define('apuesta',{
         type: DataTypes.STRING,
         allowNull: false,
     },
+    nameVendedor:{
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     value1:{
         type: DataTypes.INTEGER,
         allowNull: false,
